@@ -1,0 +1,90 @@
+body {
+  margin: 0 auto;
+  background-color: #eee;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  background-color: grey;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  height: 300px;
+  width: 200px;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+button {
+  width: 200px;
+  padding: 10px;
+}
+
+button:hover,
+button:focus {
+  font-weight: bold;
+}
+
+#accessibleModal {
+  position: fixed;
+  width: 300px;
+  height: 200px;
+  background: white;
+  border: 1px solid black;
+  padding: 10px;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 101;
+  display: none;
+}
+#accessibleDialog::backdrop {
+  background: black;
+}
+
+#accessibleDialog {
+  position: fixed;
+  width: 300px;
+  height: 200px;
+  background: white;
+  border: 1px solid black;
+  padding: 10px;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+  z-index: 101;
+}
+
+#menuContent {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.6;
+  overflow: hidden;
+  z-index: 100;
+  display: none;
+}

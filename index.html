@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aria Components</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Hamburger menu -->
+      <button
+        id="menuButton"
+        aria-expanded="false"
+        aria-controls="menuContent"
+        autofocus
+      >
+        Meny
+      </button>
+      <nav id="menuContent" hidden>
+        <ul>
+          <li><a href="#">Hem</a></li>
+          <li><a href="#">Om oss</a></li>
+          <li><a href="#">Tjänster</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <!-- Modal -->
+      <button id="openModalBtn">Öppna Modal</button>
+      <div
+        id="accessibleModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <h2 id="modalTitle">Exempel på modalfönster</h2>
+        <p>Här är lite text i modalfönstret.</p>
+        <button id="closeModalBtn">Stäng</button>
+      </div>
+
+      <!-- Dialog -->
+      <!-- Fördel med <dialog> är t ex att 
+        - det har inbyggt "modal-beteende" dvs användaren är "fångad" tills åtgärd gjorts
+        - det är ett semantiskt element
+        - det hanterar vissa ARIA-attribut automatiskt-->
+      <button id="openDialogBtn">Öppna Dialog</button>
+      <dialog
+        id="accessibleDialog"
+        aria-modal="true"
+        aria-labelledby="dialogTitle"
+      >
+        <h2 id="dialogTitle">
+          Exempel på tillgängligt modalfönster med &lt;dialog&gt;
+        </h2>
+        <p>Här är innehållet i modalfönstret.</p>
+        <button id="closeDialogBtn">Stäng</button>
+      </dialog>
+
+      <div id="overlay"></div>
+    </div>
+
+    <script src="code.js"></script>
+  </body>
+</html>
